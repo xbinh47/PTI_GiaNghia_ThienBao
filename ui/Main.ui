@@ -158,7 +158,7 @@ border-radius:16;
        <string notr="true">background:rgb(29, 29, 29)</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_9">
        <widget class="QPushButton" name="pushButton_2">
@@ -623,10 +623,10 @@ border-radius: 10;</string>
        <widget class="QPushButton" name="pushButton_13">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>551</width>
-          <height>141</height>
+          <x>0</x>
+          <y>80</y>
+          <width>561</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -636,10 +636,6 @@ border-radius: 10;</string>
         </property>
         <property name="text">
          <string>Lofi Thật Lâu Phai</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Lofi Thật lâu phai.png</normaloff>../img/Lofi Thật lâu phai.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -987,6 +983,25 @@ border-radius: 10;</string>
          </size>
         </property>
        </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>-10</y>
+          <width>311</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../img/Lofi Thật lâu phai.png</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_12">
        <widget class="QLabel" name="label_14">
@@ -1106,14 +1121,12 @@ border-radius: 10;</string>
          <rect>
           <x>110</x>
           <y>10</y>
-          <width>711</width>
+          <width>701</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgb(0, 0, 0);
-border-radius:10;</string>
+         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="txt_username">
@@ -1121,12 +1134,12 @@ border-radius:10;</string>
          <rect>
           <x>110</x>
           <y>40</y>
-          <width>721</width>
+          <width>701</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(0, 0, 0);border-radius:10;</string>
+         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="txt_password">
@@ -1134,13 +1147,12 @@ border-radius:10;</string>
          <rect>
           <x>110</x>
           <y>70</y>
-          <width>721</width>
+          <width>701</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgb(0, 0, 0);border-radius:10;</string>
+         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="txt_age">
@@ -1148,12 +1160,12 @@ background:rgb(0, 0, 0);border-radius:10;</string>
          <rect>
           <x>110</x>
           <y>100</y>
-          <width>721</width>
+          <width>701</width>
           <height>21</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(0, 0, 0);border-radius:10;</string>
+         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="txt_time">
@@ -1166,7 +1178,7 @@ background:rgb(0, 0, 0);border-radius:10;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(0, 0, 0);border-radius:10;</string>
+         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
        </widget>
        <widget class="QComboBox" name="cb_mctype">
@@ -1179,9 +1191,7 @@ background:rgb(0, 0, 0);border-radius:10;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 10pt &quot;Pinky Blues&quot;;
-background:rgb(0, 0, 0);
-border-radius:10;</string>
+         <string notr="true">font: 12pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
         <item>
          <property name="text">
@@ -1307,9 +1317,7 @@ border-radius:5</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 10pt &quot;Pinky Blues&quot;;
-background:rgb(0, 0, 0);
-border-radius:10;</string>
+         <string notr="true">font: 12pt &quot;Pinky Blues&quot;;background:rgb(29, 29, 29);border-radius:10;border: 1px solid white;</string>
         </property>
         <item>
          <property name="text">
@@ -1520,7 +1528,7 @@ border-radius: 10;</string>
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
