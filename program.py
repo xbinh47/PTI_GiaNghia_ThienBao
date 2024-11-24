@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox
 from PyQt6 import uic
 import sys
-import csv
+from setup_db import *
 import re
 
 class MessageBox():
@@ -48,15 +48,11 @@ class Login(QMainWindow):
             self.password.setFocus()
             return
 
-        data = []
-        with open("data/users.csv", "r") as file:
-            reader = csv.DictReader(file)
-            data = list(reader)
-        for row in data:
-            if row["Email"] == email and row["Password"] == password:
-                msg.success_box("Đăng nhập thành công")
-                self.show_home(email)
-                return
+        user = get_user_by_email_and_password(email,password)
+        if user:
+            msg.success_box("Đăng nhập thành công")
+            self.show_home()
+            return
         
         msg.error_box("Email hoặc mật khẩu không đúng")
     
@@ -128,19 +124,11 @@ class Register(QMainWindow):
             self.setFocus()
             return
         
-        data = []
-        with open("data/users.csv", "r") as file:
-            reader = csv.DictReader(file)
-            data = list(reader)
-        for row in data:
-            if row["Email"] == email:
-                msg.error_box("Email đã tồn tại")
-                return
+        if get_user_by_email(email):
+            msg.error_box("Email đã tồn tại")
+            return
 
-        with open("data/users.csv", "a", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow([fullname, email, password,"","","",""])
-        
+        create_user(fullname, email, password)
         msg.success_box("Đăng ký thành công")
         self.show_login()
         
