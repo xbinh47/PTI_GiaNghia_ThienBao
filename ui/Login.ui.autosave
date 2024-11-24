@@ -133,23 +133,24 @@ border-radius:25</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>260</y>
-      <width>631</width>
-      <height>61</height>
+      <x>80</x>
+      <y>230</y>
+      <width>711</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI</family>
-      <pointsize>35</pointsize>
-      <italic>true</italic>
+      <pointsize>40</pointsize>
+      <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 700 italic 35pt &quot;Segoe UI&quot;;
-z-index:2
+     <string notr="true">QLabel {
+    color: red;  /* Chỉnh màu chữ thành màu đỏ */
+}
 </string>
     </property>
     <property name="text">
