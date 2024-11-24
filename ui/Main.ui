@@ -801,7 +801,7 @@ background:rgb(29, 29, 29);</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -829,7 +829,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -857,7 +857,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -885,7 +885,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -913,7 +913,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -941,7 +941,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -969,7 +969,7 @@ border-radius: 10;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
         </property>
         <property name="text">
@@ -1490,8 +1490,9 @@ border-radius:5;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 500 16pt &quot;Roboto Mono Medium&quot;;
-background:rgb(24, 24, 24);</string>
+       <string notr="true">background-color:rgb(24, 24, 24);
+font: 500 14pt &quot;Comfortaa&quot;;
+border-radius: 10;</string>
       </property>
       <property name="text">
        <string>Now Playing: Đường Tôi Chở Em Về</string>
@@ -1508,7 +1509,7 @@ background:rgb(24, 24, 24);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
+font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
       </property>
       <property name="text">
