@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
+    <width>860</width>
     <height>919</height>
    </rect>
   </property>
@@ -20,14 +20,14 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>340</x>
       <y>40</y>
       <width>221</width>
       <height>211</height>
      </rect>
     </property>
     <property name="layoutDirection">
-     <enum>Qt::LayoutDirection::LeftToRight</enum>
+     <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">z-index:1;</string>
@@ -39,14 +39,14 @@
      <pixmap>../IMG/Icon.png</pixmap>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_login">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>610</y>
+      <x>180</x>
+      <y>540</y>
       <width>221</width>
       <height>71</height>
      </rect>
@@ -64,8 +64,8 @@ border-radius:32;
    <widget class="QLineEdit" name="txt_email">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>440</y>
+      <x>20</x>
+      <y>380</y>
       <width>541</width>
       <height>51</height>
      </rect>
@@ -87,8 +87,8 @@ border-radius:10</string>
    <widget class="QLineEdit" name="txt_password">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>500</y>
+      <x>20</x>
+      <y>470</y>
       <width>541</width>
       <height>51</height>
      </rect>
@@ -104,7 +104,7 @@ border-radius:10</string>
      <string/>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::EchoMode::Password</enum>
+     <enum>QLineEdit::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Password</string>
@@ -113,9 +113,9 @@ border-radius:10</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-80</x>
       <y>0</y>
-      <width>631</width>
+      <width>951</width>
       <height>891</height>
      </rect>
     </property>
@@ -126,47 +126,94 @@ border-radius:25</string>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap>../img/spotify-background-6dqfrop4arcronbn.jpg</pixmap>
+    </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>110</y>
-      <width>631</width>
-      <height>281</height>
+      <x>80</x>
+      <y>230</y>
+      <width>711</width>
+      <height>101</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>40</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">font: 40pt &quot;Pinky Blues&quot;;
-z-index:2
+     <string notr="true">QLabel {
+    color: red;  /* Chỉnh màu chữ thành màu đỏ */
+}
 </string>
     </property>
     <property name="text">
      <string>comeback to spotiby!</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::TextFormat::AutoText</enum>
+     <enum>Qt::AutoText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_register">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>690</y>
-      <width>111</width>
-      <height>21</height>
+      <x>490</x>
+      <y>480</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/eye-solid.svg</normaloff>../img/eye-solid.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>390</y>
+      <width>51</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/envelope-solid.svg</normaloff>../img/envelope-solid.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_login_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>630</y>
+      <width>491</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 8pt &quot;Pinky Blues&quot;;
-background:rgb(24, 24, 24)
+     <string notr="true">font: 25pt &quot;Pinky Blues&quot;;
+background:rgb(59, 228, 119);
+border-radius:32;
 </string>
     </property>
     <property name="text">
-     <string>create account</string>
+     <string>Already have an account?</string>
     </property>
    </widget>
    <zorder>label</zorder>
@@ -175,15 +222,17 @@ background:rgb(24, 24, 24)
    <zorder>txt_email</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
-   <zorder>btn_register</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>btn_login_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>643</width>
-     <height>21</height>
+     <width>860</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

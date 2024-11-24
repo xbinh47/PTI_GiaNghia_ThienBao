@@ -1376,7 +1376,7 @@ border-radius:16;
 border-radius:5;</string>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <widget class="QLabel" name="label_21">
@@ -1395,7 +1395,7 @@ border-radius:5;</string>
        <string>x:xx</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_22">
@@ -1414,7 +1414,7 @@ border-radius:5;</string>
        <string>x:xx</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton">
@@ -1454,7 +1454,7 @@ border-radius:5;</string>
 border-radius:5;</string>
       </property>
       <property name="orientation">
-       <enum>Qt::Orientation::Horizontal</enum>
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_52">
@@ -1535,7 +1535,7 @@ border-radius: 10;</string>
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>19</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
