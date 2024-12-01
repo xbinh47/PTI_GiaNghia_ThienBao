@@ -3,8 +3,7 @@ import sqlite3
 def create_user(name, email, password):
     conn = sqlite3.connect('data/db.db')
     c = conn.cursor()
-    query = f'''"INSERT INTO user (name, email, password)
-                 ('{name}'{email}','{password}')"'''
+    query = f"INSERT INTO user (name, email, password) VALUES('{name}', '{email}','{password}')"
     c.execute(query)
     conn.commit()
     conn.close()
@@ -12,7 +11,7 @@ def create_user(name, email, password):
 def get_user_by_email(email):
     conn = sqlite3.connect('data/db.db')
     c = conn.cursor()
-    query = f"SELECT id,name,password  WHERE email = {email}"
+    query = f"SELECT id,name,password FROM user WHERE email = '{email}'"
     c.execute(query)
     result = c.fetchone()
     conn.close()
@@ -21,7 +20,7 @@ def get_user_by_email(email):
 def get_user_by_email_and_password(email,password):
     conn = sqlite3.connect('data/db.db')
     c = conn.cursor()
-    query = f"SELECT id,name,password  WHERE email = {email} and password = {password}"
+    query = f"SELECT id,name,password FROM user WHERE email = '{email}' and password = '{password}'"
     c.execute(query)
     result = c.fetchone()
     conn.close()
@@ -30,7 +29,7 @@ def get_user_by_email_and_password(email,password):
 def get_user_by_id(id):
     conn = sqlite3.connect('data/db.db')
     c = conn.cursor()
-    query = f"SELECT id,name,password,gender,birthday,gendre,avatar WHERE id = {id}"
+    query = f"SELECT id,name,password,gender,birthday,gendre,avatar FROM user WHERE id = '{id}'"
     c.execute(query)
     result = c.fetchone()
     conn.close()

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>863</width>
+    <width>690</width>
     <height>919</height>
    </rect>
   </property>
@@ -20,10 +20,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>10</y>
-      <width>221</width>
-      <height>211</height>
+      <x>250</x>
+      <y>0</y>
+      <width>231</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -36,7 +36,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../IMG/Icon.png</pixmap>
+     <pixmap>../img/images__1_-removebg-preview.png</pixmap>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -45,15 +45,15 @@
    <widget class="QPushButton" name="btn_register">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>600</y>
+      <x>230</x>
+      <y>580</y>
       <width>261</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 32pt &quot;Pinky Blues&quot;;
-background:rgb(59, 228, 119);
+background:rgb(255, 255, 255);
 border-radius:32;
 </string>
     </property>
@@ -64,8 +64,8 @@ border-radius:32;
    <widget class="QLineEdit" name="txt_email">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>330</y>
+      <x>100</x>
+      <y>320</y>
       <width>511</width>
       <height>51</height>
      </rect>
@@ -87,8 +87,8 @@ border-radius:10</string>
    <widget class="QLineEdit" name="txt_fullname">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>390</y>
+      <x>100</x>
+      <y>380</y>
       <width>511</width>
       <height>51</height>
      </rect>
@@ -110,8 +110,8 @@ border-radius:10</string>
    <widget class="QLineEdit" name="txt_password">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>460</y>
+      <x>100</x>
+      <y>440</y>
       <width>511</width>
       <height>51</height>
      </rect>
@@ -136,15 +136,15 @@ border-radius:10</string>
    <widget class="QPushButton" name="btn_login">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>690</y>
+      <x>110</x>
+      <y>700</y>
       <width>491</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 25pt &quot;Pinky Blues&quot;;
-background:rgb(59, 228, 119);
+     <string notr="true">font: 25pt &quot;white&quot;;
+background:rgb(255, 255, 255);
 border-radius:32;
 </string>
     </property>
@@ -155,8 +155,8 @@ border-radius:32;
    <widget class="QLineEdit" name="txt_conf_pwd">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>530</y>
+      <x>100</x>
+      <y>500</y>
       <width>511</width>
       <height>51</height>
      </rect>
@@ -181,10 +181,10 @@ border-radius:10</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-30</x>
-      <y>0</y>
-      <width>901</width>
-      <height>891</height>
+      <x>-730</x>
+      <y>-110</y>
+      <width>1421</width>
+      <height>1041</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -195,16 +195,16 @@ border-radius:25</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../img/spotify-background-6dqfrop4arcronbn.jpg</pixmap>
+     <pixmap>../../../../../Downloads/hinh-nen-may-tinh-chill-4k31.jpg</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>240</y>
+      <x>40</x>
+      <y>220</y>
       <width>631</width>
-      <height>71</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -214,7 +214,7 @@ border-radius:25</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
-    color: red;  /* Chỉnh màu chữ thành màu đỏ
+    color: white ;  /* Chỉnh màu chữ thành màu đỏ
  */
 };
 font: 700 italic 40pt &quot;Segoe UI&quot;;
@@ -222,7 +222,7 @@ z-index:2
 </string>
     </property>
     <property name="text">
-     <string>Welcome To Spotiby!</string>
+     <string>Đăng ký vào spotify</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -234,10 +234,10 @@ z-index:2
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>340</y>
-      <width>51</width>
-      <height>29</height>
+      <x>560</x>
+      <y>330</y>
+      <width>31</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -251,10 +251,10 @@ z-index:2
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>400</y>
-      <width>51</width>
-      <height>29</height>
+      <x>560</x>
+      <y>390</y>
+      <width>31</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -268,10 +268,10 @@ z-index:2
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>470</y>
-      <width>51</width>
-      <height>29</height>
+      <x>560</x>
+      <y>450</y>
+      <width>31</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -285,10 +285,10 @@ z-index:2
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>540</y>
-      <width>51</width>
-      <height>29</height>
+      <x>560</x>
+      <y>510</y>
+      <width>31</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -297,6 +297,40 @@ z-index:2
     <property name="icon">
      <iconset>
       <normaloff>../img/lock-solid.svg</normaloff>../img/lock-solid.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>450</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/lock-open-solid.svg</normaloff>../img/lock-open-solid.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>510</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/lock-open-solid.svg</normaloff>../img/lock-open-solid.svg</iconset>
     </property>
    </widget>
    <zorder>label</zorder>
@@ -312,13 +346,15 @@ z-index:2
    <zorder>pushButton_2</zorder>
    <zorder>pushButton_3</zorder>
    <zorder>pushButton_4</zorder>
+   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_7</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>863</width>
+     <width>690</width>
      <height>26</height>
     </rect>
    </property>
