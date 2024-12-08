@@ -51,13 +51,13 @@ class Login(QMainWindow):
         user = get_user_by_email_and_password(email,password)
         if user:
             msg.success_box("Đăng nhập thành công")
-            self.show_home()
+            self.show_home(user["id"])
             return
         
         msg.error_box("Email hoặc mật khẩu không đúng")
     
-    def show_home(self,email):
-        self.home = Home(email)
+    def show_home(self,user_id):
+        self.home = Home(user_id)
         self.home.show()
         self.close()   
          
@@ -138,10 +138,10 @@ class Register(QMainWindow):
         self.close()
         
 class Home(QMainWindow):
-    def __init__(self,email):
+    def __init__(self,user_id):
         super().__init__()
         uic.loadUi("ui/Main.ui", self)
-        self.email = email
+        self.user_id = user_id
         
         self.stackWidget = self.findChild(QStackedWidget, "stackedWidget")
         self.btn_info = self.findChild(QPushButton, "btn_info")
@@ -161,7 +161,7 @@ class Home(QMainWindow):
         self.cb_mctype = self.findChild(QComboBox, "cb_mctype")
         self.cb_gender = self.findChild(QComboBox, "cb_gender")
 
-        self.loadInfo(email)
+        self.loadInfo(user_id)
 
     def navInfoScreen(self):
         self.stackWidget.setCurrentIndex(3)
@@ -175,18 +175,12 @@ class Home(QMainWindow):
     def navAllScreen(self):
         self.stackWidget.setCurrentIndex(0)
 
-    def loadInfo(self,email):
-        data = []
-        with open("data/users.csv", "r") as file:
-            reader = csv.DictReader(file)
-            data = list(reader)
-        for row in data:
-            if row["Email"] == email:
-                self.txt_email.setText(row["Email"])
-                self.txt_username.setText(row["Name"])
-                self.txt_password.setText(row["Password"])
-                self.txt_age.setText(row["Age"])
-                self.txt_time.setText(row["UsedTime"])
+    def loadInfo(self, user_id):
+        user = get_user_by_id(user_id)
+        print(user)
+        self.txt_email.setText(user["email"])
+        self.txt_username.setText(user["name"])
+        self.txt_password.setText(user["password"])
 
         
 if __name__ == "__main__":

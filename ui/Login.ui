@@ -109,7 +109,7 @@ border-radius:25</string>
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>380</y>
+      <y>370</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -174,7 +174,7 @@ z-index:2
 </string>
     </property>
     <property name="text">
-     <string>Đăng ký vào spotify</string>
+     <string>Đăng nhập vào spotify</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -200,6 +200,25 @@ z-index:2
       <normaloff>../img/lock-solid.svg</normaloff>../img/lock-solid.svg</iconset>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_register">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>600</y>
+      <width>371</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 32pt &quot;Pinky Blues&quot;;
+background:rgb(255, 255, 255);
+border-radius:32;
+</string>
+    </property>
+    <property name="text">
+     <string>register</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>txt_password</zorder>
    <zorder>btn_login</zorder>
@@ -208,6 +227,7 @@ z-index:2
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
    <zorder>pushButton_3</zorder>
+   <zorder>btn_register</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
