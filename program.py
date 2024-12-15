@@ -1,5 +1,5 @@
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox
+from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox, QDateEdit
 from PyQt6.QtGui import QIcon
 from PyQt6 import uic
 import sys
@@ -180,11 +180,10 @@ class Home(QMainWindow):
         
         self.txt_email = self.findChild(QLineEdit, "txt_email")
         self.txt_username = self.findChild(QLineEdit, "txt_username")
-        self.txt_password = self.findChild(QLineEdit, "txt_password")
-        self.txt_time = self.findChild(QLineEdit, "txt_time")
         self.txt_age = self.findChild(QLineEdit, "txt_age")
-        self.cb_mctype = self.findChild(QComboBox, "cb_mctype")
+        self.cb_fav_mucsic = self.findChild(QComboBox, "cb_fav_mucsic")
         self.cb_gender = self.findChild(QComboBox, "cb_gender")
+        self.cb_dob = self.findChild(QDateEdit, "cb_dob")
 
         self.loadInfo(user_id)
 
