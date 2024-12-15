@@ -201,7 +201,7 @@ class Ui_MainWindow(object):
         self.page_10 = QtWidgets.QWidget()
         self.page_10.setObjectName("page_10")
         self.pushButton_8 = QtWidgets.QPushButton(parent=self.page_10)
-        self.pushButton_8.setGeometry(QtCore.QRect(10, 10, 341, 71))
+        self.pushButton_8.setGeometry(QtCore.QRect(10, 20, 341, 71))
         self.pushButton_8.setStyleSheet("background-color:rgb(24, 24, 24);\n"
 "font: 500 14pt \"Roboto Mono Medium\";\n"
 "border-radius: 10;")
@@ -209,7 +209,7 @@ class Ui_MainWindow(object):
         self.pushButton_8.setIconSize(QtCore.QSize(75, 75))
         self.pushButton_8.setObjectName("pushButton_8")
         self.pushButton_9 = QtWidgets.QPushButton(parent=self.page_10)
-        self.pushButton_9.setGeometry(QtCore.QRect(370, 10, 281, 71))
+        self.pushButton_9.setGeometry(QtCore.QRect(370, 20, 281, 71))
         self.pushButton_9.setStyleSheet("background-color:rgb(24, 24, 24);\n"
 "font: 500 14pt \"Roboto Mono Medium\";\n"
 "border-radius: 10;")
@@ -217,7 +217,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setIconSize(QtCore.QSize(75, 75))
         self.pushButton_9.setObjectName("pushButton_9")
         self.pushButton_10 = QtWidgets.QPushButton(parent=self.page_10)
-        self.pushButton_10.setGeometry(QtCore.QRect(670, 10, 201, 71))
+        self.pushButton_10.setGeometry(QtCore.QRect(670, 20, 201, 71))
         self.pushButton_10.setStyleSheet("background-color:rgb(24, 24, 24);\n"
 "font: 500 14pt \"Roboto Mono Medium\";\n"
 "border-radius: 10;")
@@ -225,7 +225,7 @@ class Ui_MainWindow(object):
         self.pushButton_10.setIconSize(QtCore.QSize(75, 75))
         self.pushButton_10.setObjectName("pushButton_10")
         self.pushButton_11 = QtWidgets.QPushButton(parent=self.page_10)
-        self.pushButton_11.setGeometry(QtCore.QRect(10, 90, 181, 71))
+        self.pushButton_11.setGeometry(QtCore.QRect(10, 100, 181, 71))
         self.pushButton_11.setStyleSheet("background-color:rgb(24, 24, 24);\n"
 "font: 500 14pt \"Roboto Mono Medium\";\n"
 "border-radius: 10;")
@@ -447,6 +447,41 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.stackedWidget.addWidget(self.page_12)
+        self.page = QtWidgets.QWidget()
+        self.page.setObjectName("page")
+        self.pushButton_21 = QtWidgets.QPushButton(parent=self.page)
+        self.pushButton_21.setGeometry(QtCore.QRect(660, 10, 201, 71))
+        self.pushButton_21.setStyleSheet("background-color:rgb(24, 24, 24);\n"
+"font: 500 14pt \"Roboto Mono Medium\";\n"
+"border-radius: 10;")
+        self.pushButton_21.setIcon(icon7)
+        self.pushButton_21.setIconSize(QtCore.QSize(75, 75))
+        self.pushButton_21.setObjectName("pushButton_21")
+        self.pushButton_26 = QtWidgets.QPushButton(parent=self.page)
+        self.pushButton_26.setGeometry(QtCore.QRect(360, 10, 281, 71))
+        self.pushButton_26.setStyleSheet("background-color:rgb(24, 24, 24);\n"
+"font: 500 14pt \"Roboto Mono Medium\";\n"
+"border-radius: 10;")
+        self.pushButton_26.setIcon(icon10)
+        self.pushButton_26.setIconSize(QtCore.QSize(75, 75))
+        self.pushButton_26.setObjectName("pushButton_26")
+        self.pushButton_27 = QtWidgets.QPushButton(parent=self.page)
+        self.pushButton_27.setGeometry(QtCore.QRect(0, 10, 341, 71))
+        self.pushButton_27.setStyleSheet("background-color:rgb(24, 24, 24);\n"
+"font: 500 14pt \"Roboto Mono Medium\";\n"
+"border-radius: 10;")
+        self.pushButton_27.setIcon(icon8)
+        self.pushButton_27.setIconSize(QtCore.QSize(75, 75))
+        self.pushButton_27.setObjectName("pushButton_27")
+        self.pushButton_28 = QtWidgets.QPushButton(parent=self.page)
+        self.pushButton_28.setGeometry(QtCore.QRect(0, 90, 181, 71))
+        self.pushButton_28.setStyleSheet("background-color:rgb(24, 24, 24);\n"
+"font: 500 14pt \"Roboto Mono Medium\";\n"
+"border-radius: 10;")
+        self.pushButton_28.setIcon(icon9)
+        self.pushButton_28.setIconSize(QtCore.QSize(75, 75))
+        self.pushButton_28.setObjectName("pushButton_28")
+        self.stackedWidget.addWidget(self.page)
         self.btn_info = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
         self.btn_info.setGeometry(QtCore.QRect(340, 20, 101, 41))
         self.btn_info.setStyleSheet("font: 16pt \"Pinky Blues\";\n"
@@ -504,15 +539,22 @@ class Ui_MainWindow(object):
         self.pushButton_53.setIcon(icon10)
         self.pushButton_53.setIconSize(QtCore.QSize(75, 75))
         self.pushButton_53.setObjectName("pushButton_53")
+        self.btn_info_2 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
+        self.btn_info_2.setGeometry(QtCore.QRect(450, 20, 101, 41))
+        self.btn_info_2.setStyleSheet("font: 16pt \"Pinky Blues\";\n"
+"background:rgb(51, 51, 51);\n"
+"border-radius:16;\n"
+"")
+        self.btn_info_2.setObjectName("btn_info_2")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents_3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1280, 19))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -579,8 +621,13 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(0, _translate("MainWindow", "Male"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Famale"))
         self.comboBox.setItemText(2, _translate("MainWindow", "Other"))
+        self.pushButton_21.setText(_translate("MainWindow", "Sau Đêm Nay"))
+        self.pushButton_26.setText(_translate("MainWindow", "Đường Tôi Chở Em về"))
+        self.pushButton_27.setText(_translate("MainWindow", "Tình Đắng Như Ly Cà Phê"))
+        self.pushButton_28.setText(_translate("MainWindow", "id 072019"))
         self.btn_info.setText(_translate("MainWindow", "Info"))
         self.label_21.setText(_translate("MainWindow", "x:xx"))
         self.label_22.setText(_translate("MainWindow", "x:xx"))
         self.label_8.setText(_translate("MainWindow", "Now Playing: Đường Tôi Chở Em Về"))
         self.pushButton_53.setText(_translate("MainWindow", "Đường Tôi Chở Em về"))
+        self.btn_info_2.setText(_translate("MainWindow", "Liked"))
