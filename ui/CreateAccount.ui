@@ -265,7 +265,7 @@ z-index:2
       <normaloff>../img/person-solid.svg</normaloff>../img/person-solid.svg</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btn_lock1">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -279,14 +279,14 @@ z-index:2
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../img/lock-solid.svg</normaloff>../img/lock-solid.svg</iconset>
+      <normaloff>../img/eye-slash-solid.svg</normaloff>../img/eye-slash-solid.svg</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btn_lock2">
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>510</y>
+      <y>520</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -296,41 +296,7 @@ z-index:2
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../img/lock-solid.svg</normaloff>../img/lock-solid.svg</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_6">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>450</y>
-      <width>31</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../img/lock-open-solid.svg</normaloff>../img/lock-open-solid.svg</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_7">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>510</y>
-      <width>31</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../img/lock-open-solid.svg</normaloff>../img/lock-open-solid.svg</iconset>
+      <normaloff>../img/eye-slash-solid.svg</normaloff>../img/eye-slash-solid.svg</iconset>
     </property>
    </widget>
    <zorder>label</zorder>
@@ -344,10 +310,8 @@ z-index:2
    <zorder>label_3</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_6</zorder>
-   <zorder>pushButton_7</zorder>
+   <zorder>btn_lock1</zorder>
+   <zorder>btn_lock2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

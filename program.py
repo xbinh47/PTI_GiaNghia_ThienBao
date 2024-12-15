@@ -1,5 +1,6 @@
 from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox
+from PyQt6.QtGui import QIcon
 from PyQt6 import uic
 import sys
 from setup_db import *
@@ -29,9 +30,20 @@ class Login(QMainWindow):
         self.password = self.findChild(QLineEdit, "txt_password")
         self.btn_login = self.findChild(QPushButton, "btn_login")
         self.btn_register = self.findChild(QPushButton, "btn_register")
+        self.btn_lock = self.findChild(QPushButton, "btn_lock")
         
         self.btn_login.clicked.connect(self.login)
         self.btn_register.clicked.connect(self.show_register)
+
+        self.btn_lock.clicked.connect(lambda: self.hiddenOrShow(self.password, self.btn_lock))
+        
+    def hiddenOrShow(self, input:QLineEdit, button:QPushButton):
+        if input.echoMode() == QLineEdit.EchoMode.Password:
+            input.setEchoMode(QLineEdit.EchoMode.Normal)
+            button.setIcon(QIcon("img/eye-solid.svg"))
+        else:
+            input.setEchoMode(QLineEdit.EchoMode.Password)
+            button.setIcon(QIcon("img/eye-slash-solid.svg"))
         
     def login(self):
         msg = MessageBox()
@@ -77,9 +89,22 @@ class Register(QMainWindow):
         self.confirm_password = self.findChild(QLineEdit, "txt_conf_pwd")
         self.btn_register = self.findChild(QPushButton, "btn_register")
         self.btn_login = self.findChild(QPushButton, "btn_login")
+        self.btn_lock1 = self.findChild(QPushButton, "btn_lock1")
+        self.btn_lock2 = self.findChild(QPushButton, "btn_lock2")
         
         self.btn_register.clicked.connect(self.register)
         self.btn_login.clicked.connect(self.show_login)
+
+        self.btn_lock1.clicked.connect(lambda: self.hiddenOrShow(self.password, self.btn_lock1))
+        self.btn_lock2.clicked.connect(lambda: self.hiddenOrShow(self.confirm_password, self.btn_lock2))
+        
+    def hiddenOrShow(self, input:QLineEdit, button:QPushButton):
+        if input.echoMode() == QLineEdit.EchoMode.Password:
+            input.setEchoMode(QLineEdit.EchoMode.Normal)
+            button.setIcon(QIcon("img/eye-solid.svg"))
+        else:
+            input.setEchoMode(QLineEdit.EchoMode.Password)
+            button.setIcon(QIcon("img/eye-slash-solid.svg"))
         
     def register(self):
         msg = MessageBox()
