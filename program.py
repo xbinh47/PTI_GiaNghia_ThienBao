@@ -51,22 +51,22 @@ class Login(QMainWindow):
         password = self.password.text()
         
         if email == "":
-            msg.error_box("Email không được để trống")
+            msg.error_box("Email can't be empty")
             self.email.setFocus()
             return
 
         if password == "":
-            msg.error_box("Mật khẩu không được để trống")
+            msg.error_box("Password can't be empty")
             self.password.setFocus()
             return
 
         user = get_user_by_email_and_password(email,password)
         if user:
-            msg.success_box("Đăng nhập thành công")
+            msg.success_box("Welcome")
             self.show_home(user["id"])
             return
         
-        msg.error_box("Email hoặc mật khẩu không đúng")
+        msg.error_box("Email or password is incorrect!")
     
     def show_home(self,user_id):
         self.home = Home(user_id)
@@ -114,47 +114,47 @@ class Register(QMainWindow):
         confirm_password = self.confirm_password.text()
         
         if fullname == "":
-            msg.error_box("Họ tên không được để trống")
+            msg.error_box("Name can't be empty")
             self.fullname.setFocus()
             return
         
         if email == "":
-            msg.error_box("Email không được để trống")
+            msg.error_box("Email can't be empty")
             self.email.setFocus()
             return
 
         if password == "":
-            msg.error_box("Mật khẩu không được để trống")
+            msg.error_box("Password can't be empty")
             self.password.setFocus()
             return
         
         if confirm_password == "":
-            msg.error_box("Xác nhận mật khẩu không được để trống")
+            msg.error_box("Please comfirm the password")
             self.confirm_password.setFocus()
             return
         
         if password != confirm_password:
-            msg.error_box("Mật khẩu không trùng khớp")
+            msg.error_box("Comfirm password is not correct with password")
             self.confirm_password.setText("")
             self.password.setFocus()
             return
         
         if not re.match(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b',email):
-            msg.error_box("Email không hợp lệ")
+            msg.error_box("Email is not valid")
             self.email.setFocus()
             return
         
         if len(password) < 8:
-            msg.error_box("Mật khẩu cần ít nhất 8 ký tự")
+            msg.error_box("")
             self.setFocus()
             return
         
         if get_user_by_email(email):
-            msg.error_box("Email đã tồn tại")
+            msg.error_box("Email is not ")
             return
 
         create_user(fullname, email, password)
-        msg.success_box("Đăng ký thành công")
+        msg.success_box("Register sussucfully!")
         self.show_login()
         
     def show_login(self):
@@ -213,4 +213,3 @@ if __name__ == "__main__":
     window = Login()
     window.show()
     app.exec()
-
