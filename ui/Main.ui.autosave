@@ -1255,7 +1255,7 @@ border-radius:5</string>
          <string>Save</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="cb_gender">
+       <widget class="QComboBox" name="comboBox">
         <property name="geometry">
          <rect>
           <x>160</x>
