@@ -1,11 +1,11 @@
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox, QFileDialog
+from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox, QFileDialog, QWidget, QLabel, QScrollArea, QGridLayout
 from PyQt6.QtGui import QIcon
 from PyQt6 import uic
 import sys
 from setup_db import *
 import re
-
+from model.song import Song
 class MessageBox():
     def success_box(self, message):
         box = QMessageBox()
@@ -72,7 +72,7 @@ class Login(QMainWindow):
         self.home = Home(user_id)
         self.home.show()
         self.close()   
-         
+
     def show_register(self):
         self.register = Register()
         self.register.show()
@@ -145,7 +145,7 @@ class Register(QMainWindow):
             return
         
         if len(password) < 8:
-            msg.error_box("")
+            msg.error_box("Password must be at least 8 characters")
             self.setFocus()
             return
         
@@ -161,11 +161,46 @@ class Register(QMainWindow):
         self.login = Login()
         self.login.show()
         self.close()
+
+class SongItemWidget(QWidget):
+    play_song = QtCore.pyqtSignal(int)
+    add_song_to_playlist = QtCore.pyqtSignal(int)
+    def __init__(self, song_id, song_name, song_artists, song_album, song_playcount):
+        super().__init__()
+        uic.loadUi("ui/songItems.ui", self)
+        self.song_id = song_id
+        self.song_name = song_name
+        self.song_artists = song_artists
+        self.song_album = song_album
+        self.song_playcount = song_playcount
+        
+        self.name = self.findChild(QLabel, "lbl_name")
+        self.artist = self.findChild(QLabel, "lbl_artist")
+        self.album = self.findChild(QLabel, "lbl_album")
+        self.playcount = self.findChild(QLabel, "lbl_playcount")
+        self.btn_play = self.findChild(QPushButton, "btn_play")
+        self.btn_add = self.findChild(QPushButton, "btn_add")
+        self.name.setText("Name: " + self.song_name)
+        self.artist.setText("Artist: " + self.song_artists)
+        self.album.setText("Album: " + self.song_album)
+        self.playcount.setText("Played: " + str(self.song_playcount))
+        
+        self.btn_play.clicked.connect(self.play)
+        self.btn_add.clicked.connect(self.add)
+        
+        self.setMinimumSize(250,180)
+        
+    def play(self):
+        self.play_song.emit(self.song_id)
+
+    def add(self):
+        self.add_song_to_playlist.emit(self.song_id)
         
 class Home(QMainWindow):
     def __init__(self,user_id):
         super().__init__()
         uic.loadUi("ui/Main.ui", self)
+        self.play_list = []
         self.user_id = user_id
         
         self.stackWidget = self.findChild(QStackedWidget, "stackedWidget")
@@ -175,6 +210,8 @@ class Home(QMainWindow):
         self.btn_avatar = self.findChild(QPushButton, "btn_avatar")
         self.btn_list = self.findChild(QPushButton, "btn_list")
         self.btn_info_save = self.findChild(QPushButton, "btn_info_save")
+        self.songList = self.findChild(QScrollArea, "songList")
+        
         self.btn_info.clicked.connect(self.navInfoScreen)
         self.btn_list.clicked.connect(self.navListScreen)
         self.btn_all.clicked.connect(self.navAllScreen)
@@ -186,8 +223,19 @@ class Home(QMainWindow):
         self.txt_username = self.findChild(QLineEdit, "txt_username")
         self.cb_fav_music  = self.findChild(QComboBox, "cb_fav_music")
         self.cb_gender = self.findChild(QComboBox, "cb_gender")
+        
+        self.songItem = QWidget()
+        self.gridLayout = QGridLayout(self.songItem)
+        self.gridLayout.setContentsMargins(10, 10, 10, 10)
+        self.gridLayout.setSpacing(10)
+
+        self.songItem.setLayout(self.gridLayout)
+
+        self.songList.setWidget(self.songItem)
+        self.songList.setWidgetResizable(True)
 
         self.loadInfo(user_id)
+        self.render_song_list(get_first_15_songs_ordered_by_playcount())
 
     def navInfoScreen(self):
         self.stackWidget.setCurrentIndex(3)
@@ -227,17 +275,37 @@ class Home(QMainWindow):
             gender = "Other"
         avatar = self.user["avatar"]
         u = User(name, email, "", fav_music, gender, avatar)
-        print(u)
         
         update_user(self.user_id, u)
-        self.renderAccountScreen()
+        self.loadInfo(self.user_id)
 
     def loadAvatarFromFile(self):
-            file, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Image Files (*.png *.jpg *jpeg *.bmp)")
-            if file:
-                self.user["avatar"] = file
-                self.btn_avatar.setIcon(QIcon(file))
+        file, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Image Files (*.png *.jpg *jpeg *.bmp)")
+        if file:
+            self.user["avatar"] = file
+            self.btn_avatar.setIcon(QIcon(file))
+            
+    def render_song_list(self, song_list:list):
+        row = 0
+        column = 0
+        for song in song_list:
+            itemWidget = SongItemWidget(song["id"], song["name"], song["artist_names"], song["album_name"], song["playcount"])
+            itemWidget.play_song.connect(self.play_song)
+            itemWidget.add_song_to_playlist.connect(self.add_song_to_playlist)
+            self.gridLayout.addWidget(itemWidget, row, column)
+            column += 1
+            if column == 3:
+                row += 1
+                column = 0
+
+    @QtCore.pyqtSlot(int)
+    def add_song_to_playlist(self, song_id):
+        self.play_list.append(song_id)
         
+    @QtCore.pyqtSlot(int)
+    def play_song(self, song_id):
+        self.play_list.append(song_id)
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Login()

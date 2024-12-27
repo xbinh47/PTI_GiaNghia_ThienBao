@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
+     <enum>Qt::LayoutDirection::LeftToRight</enum>
     </property>
     <property name="styleSheet">
      <string notr="true">z-index:1;</string>
@@ -39,7 +39,7 @@
      <pixmap>../img/images__1_-removebg-preview.png</pixmap>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_register">
@@ -55,7 +55,7 @@
      <string notr="true">font: 32pt &quot;Pinky Blues&quot;;
 background:rgb(255, 255, 255);
 border-radius:32;
-</string>
+color: black;</string>
     </property>
     <property name="text">
      <string>Sign Up</string>
@@ -127,7 +127,7 @@ border-radius:10</string>
      <string/>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Password</string>
@@ -146,7 +146,7 @@ border-radius:10</string>
      <string notr="true">font: 25pt &quot;white&quot;;
 background:rgb(255, 255, 255);
 border-radius:32;
-</string>
+color: black;</string>
     </property>
     <property name="text">
      <string>Already have an account?</string>
@@ -172,7 +172,7 @@ border-radius:10</string>
      <string/>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Comfirm Password</string>
@@ -225,10 +225,10 @@ z-index:2
      <string>Đăng ký vào spotify</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::AutoText</enum>
+     <enum>Qt::TextFormat::AutoText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -319,7 +319,7 @@ z-index:2
      <x>0</x>
      <y>0</y>
      <width>690</width>
-     <height>26</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

@@ -39,7 +39,7 @@
     </rect>
    </property>
    <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">z-index:1;</string>
@@ -51,7 +51,7 @@
     <pixmap>../img/images__1_-removebg-preview.png</pixmap>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="txt_email_2">
@@ -97,10 +97,10 @@ border-radius:10</string>
     <string/>
    </property>
    <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
+    <enum>QLineEdit::EchoMode::Password</enum>
    </property>
    <property name="placeholderText">
-    <string>old password</string>
+    <string>Old password</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txt_newpassword">
@@ -123,7 +123,7 @@ border-radius:10</string>
     <string/>
    </property>
    <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
+    <enum>QLineEdit::EchoMode::Password</enum>
    </property>
    <property name="placeholderText">
     <string>New Password</string>
@@ -179,10 +179,10 @@ z-index:2
     <string>đổi mật khẩu</string>
    </property>
    <property name="textFormat">
-    <enum>Qt::AutoText</enum>
+    <enum>Qt::TextFormat::AutoText</enum>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
