@@ -1,5 +1,5 @@
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox
+from PyQt6.QtWidgets import QApplication, QMessageBox, QLineEdit, QPushButton, QMessageBox, QMainWindow, QStackedWidget, QComboBox, QFileDialog
 from PyQt6.QtGui import QIcon
 from PyQt6 import uic
 import sys
@@ -51,22 +51,22 @@ class Login(QMainWindow):
         password = self.password.text()
         
         if email == "":
-            msg.error_box("Email không được để trống")
+            msg.error_box("Email can't be empty")
             self.email.setFocus()
             return
 
         if password == "":
-            msg.error_box("Mật khẩu không được để trống")
+            msg.error_box("Password can't be empty")
             self.password.setFocus()
             return
 
         user = get_user_by_email_and_password(email,password)
         if user:
-            msg.success_box("Đăng nhập thành công")
+            msg.success_box("Welcome")
             self.show_home(user["id"])
             return
         
-        msg.error_box("Email hoặc mật khẩu không đúng")
+        msg.error_box("Email or password is incorrect!")
     
     def show_home(self,user_id):
         self.home = Home(user_id)
@@ -114,47 +114,47 @@ class Register(QMainWindow):
         confirm_password = self.confirm_password.text()
         
         if fullname == "":
-            msg.error_box("Họ tên không được để trống")
+            msg.error_box("Name can't be empty")
             self.fullname.setFocus()
             return
         
         if email == "":
-            msg.error_box("Email không được để trống")
+            msg.error_box("Email can't be empty")
             self.email.setFocus()
             return
 
         if password == "":
-            msg.error_box("Mật khẩu không được để trống")
+            msg.error_box("Password can't be empty")
             self.password.setFocus()
             return
         
         if confirm_password == "":
-            msg.error_box("Xác nhận mật khẩu không được để trống")
+            msg.error_box("Please comfirm the password")
             self.confirm_password.setFocus()
             return
         
         if password != confirm_password:
-            msg.error_box("Mật khẩu không trùng khớp")
+            msg.error_box("Comfirm password is not correct with password")
             self.confirm_password.setText("")
             self.password.setFocus()
             return
         
         if not re.match(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b',email):
-            msg.error_box("Email không hợp lệ")
+            msg.error_box("Email is not valid")
             self.email.setFocus()
             return
         
         if len(password) < 8:
-            msg.error_box("Mật khẩu cần ít nhất 8 ký tự")
+            msg.error_box("")
             self.setFocus()
             return
         
         if get_user_by_email(email):
-            msg.error_box("Email đã tồn tại")
+            msg.error_box("Email is not ")
             return
 
         create_user(fullname, email, password)
-        msg.success_box("Đăng ký thành công")
+        msg.success_box("Register sussucfully!")
         self.show_login()
         
     def show_login(self):
@@ -172,18 +172,19 @@ class Home(QMainWindow):
         self.btn_info = self.findChild(QPushButton, "btn_info")
         self.btn_all = self.findChild(QPushButton, "btn_all")
         self.btn_music = self.findChild(QPushButton, "btn_music")
+        self.btn_avatar = self.findChild(QPushButton, "btn_avatar")
         self.btn_list = self.findChild(QPushButton, "btn_list")
+        self.btn_info_save = self.findChild(QPushButton, "btn_info_save")
         self.btn_info.clicked.connect(self.navInfoScreen)
         self.btn_list.clicked.connect(self.navListScreen)
         self.btn_all.clicked.connect(self.navAllScreen)
         self.btn_music.clicked.connect(self.navMusicScreen)
+        self.btn_avatar.clicked.connect(self.loadAvatarFromFile)
+        self.btn_info_save.clicked.connect(self.changeAccountInfo)
         
         self.txt_email = self.findChild(QLineEdit, "txt_email")
         self.txt_username = self.findChild(QLineEdit, "txt_username")
-        self.txt_password = self.findChild(QLineEdit, "txt_password")
-        self.txt_time = self.findChild(QLineEdit, "txt_time")
-        self.txt_age = self.findChild(QLineEdit, "txt_age")
-        self.cb_mctype = self.findChild(QComboBox, "cb_mctype")
+        self.cb_fav_music  = self.findChild(QComboBox, "cb_fav_music")
         self.cb_gender = self.findChild(QComboBox, "cb_gender")
 
         self.loadInfo(user_id)
@@ -202,15 +203,44 @@ class Home(QMainWindow):
 
     def loadInfo(self, user_id):
         user = get_user_by_id(user_id)
-        print(user)
+        self.user = user
         self.txt_email.setText(user["email"])
         self.txt_username.setText(user["name"])
-        self.txt_password.setText(user["password"])
+        if user["fav_music"]:
+            self.cb_fav_music.setCurrentIndex(user["fav_music"])
+        if user["gender"] == "Male":
+            self.cb_gender.setCurrentIndex(0)
+        elif user["gender"] == "Female":
+            self.cb_gender.setCurrentIndex(1)
+        else: 
+            self.cb_gender.setCurrentIndex(2)
 
+    def changeAccountInfo(self):
+        name = self.txt_username.text()
+        email = self.txt_email.text()
+        fav_music = self.cb_fav_music.text()
+        if self.cb_gender.currentIndex() == 0:
+            gender = "Male"
+        elif self.cb_gender.currentIndex() == 1:
+            gender = "Female"
+        else:
+            gender = "Other"
+        avatar = self.user["avatar"]
+        u = User(name, email, "", fav_music, gender, avatar)
+        print(u)
+        
+        update_user(self.user_id, u)
+        self.renderAccountScreen()
+
+    def loadAvatarFromFile(self):
+            file, _ = QFileDialog.getOpenFileName(self, "Select Image", "", "Image Files (*.png *.jpg *jpeg *.bmp)")
+            if file:
+                self.user["avatar"] = file
+                self.btn_avatar.setIcon(QIcon(file))
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Login()
     window.show()
     app.exec()
-
+    
