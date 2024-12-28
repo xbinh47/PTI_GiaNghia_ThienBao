@@ -1,5 +1,5 @@
 import sqlite3
-
+import os
 def row_factory(cursor, row):
     return {col[0]: row[idx] for idx, col in enumerate(cursor.description)}
 
@@ -23,24 +23,34 @@ def get_all_artists():
     result = c.fetchall()
     conn.close()
     return result
-
-artists = get_all_artists()
-# make map of artist id and name
-artist_map = {artist["id"]: artist["name"] for artist in artists}
-print(artist_map)
-# get all songs and artist id than add artist name to song
 songs = get_all_songs()
+missing_image = []
 for song in songs:
-    artist_names = []
-    # Check if artist_ids exists and convert from string if needed
-    if song["artist_ids"]:
-        # Remove brackets and split by comma
-        artist_id_list = song["artist_ids"].strip('[]').split(',')
-        for artist_id in artist_id_list:
-            # Remove quotes and whitespace
-            clean_id = artist_id.strip().strip('"\'')
-            artist_names.append(artist_map.get(clean_id, "Unknown Artist"))
-    song["artist_names"] = artist_names
+    # check image path exist in songs_images folder
+    if song["image_path"] == "" or song["image_path"] is None:
+        missing_image.append(song["id"])
+    else:
+        # check image path exist in songs_images folder
+        
+        if not os.path.exists(song["image_path"]):
+            missing_image.append(song["id"])
+for song_id in missing_image:
+    with open("data2.txt", "a") as f:
+        f.write(f"{song_id}\n")
+# artists = get_all_artists()
+# artist_map = {artist["id"]: artist["name"] for artist in artists}
+# get all songs and artist id than add artist name to song
+# for song in songs:
+#     artist_names = []
+#     # Check if artist_ids exists and convert from string if needed
+#     if song["artist_ids"]:
+#         # Remove brackets and split by comma
+#         artist_id_list = song["artist_ids"].strip('[]').split(',')
+#         for artist_id in artist_id_list:
+#             # Remove quotes and whitespace
+#             clean_id = artist_id.strip().strip('"\'')
+#             artist_names.append(artist_map.get(clean_id, "Unknown Artist"))
+#     song["artist_names"] = artist_names
     
 
 def remove_vietnamese_signs(text: str) -> str:
@@ -85,18 +95,32 @@ def build_alias(name: str) -> str:
         name = name.replace('--', '-')
     return name
 
-# Update the database with artist names
-conn = sqlite3.connect('data/spotify.db')
-c = conn.cursor()
-for song in songs:
-    # Join artist names with comma if multiple artists
-    artist_names_str = ','.join(song["artist_names"])
-    c.execute("""
-        UPDATE songs 
-        SET artist_names = ?, alias = ? 
-        WHERE id = ?
-    """, (artist_names_str, build_alias(song["name"]), song["id"]))
+# # Update the database with artist names
+# conn = sqlite3.connect('data/spotify.db')
+# c = conn.cursor()
+# for song in songs:
+#     # Join artist names with comma if multiple artists
+#     artist_names_str = ','.join(song["artist_names"])
+#     c.execute("""
+#         UPDATE songs 
+#         SET artist_names = ?, alias = ? 
+#         WHERE id = ?
+#     """, (artist_names_str, build_alias(song["name"]), song["id"]))
 
-conn.commit()
-conn.close()
+# conn.commit()
+# conn.close()
 
+# update song_images
+# with open("data.txt", "r") as f:
+#     lines = f.readlines()
+#     for line in lines:
+#         song_id, image_id = line.strip().split(" - ")
+#         conn = sqlite3.connect('data/spotify.db')
+#         c = conn.cursor()
+#         c.execute("""
+#             UPDATE songs 
+#             SET image_path = ? 
+#             WHERE id = ?
+#         """, (f"songs_images/{image_id}.jpg", song_id))
+#         conn.commit()
+#         conn.close()

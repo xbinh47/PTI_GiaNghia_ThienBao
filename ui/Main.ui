@@ -107,29 +107,10 @@ border-radius:16;
        <string>All</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_music">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>20</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgb(51, 51, 51);
-border-radius:16;
-</string>
-      </property>
-      <property name="text">
-       <string>Music</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btn_list">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>120</x>
         <y>20</y>
         <width>101</width>
         <height>41</height>
@@ -148,8 +129,8 @@ border-radius:16;
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="geometry">
        <rect>
-        <x>9</x>
-        <y>69</y>
+        <x>10</x>
+        <y>100</y>
         <width>891</width>
         <height>441</height>
        </rect>
@@ -158,501 +139,15 @@ border-radius:16;
        <string notr="true">background:rgb(29, 29, 29)</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>0</number>
       </property>
-      <widget class="QWidget" name="page_9">
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>30</y>
-          <width>271</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Lofi Thật Lâu Phai</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Lofi Thật lâu phai.png</normaloff>../img/Lofi Thật lâu phai.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>290</x>
-          <y>30</y>
-          <width>181</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Liked Song</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Liked Song.png</normaloff>../img/Liked Song.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>30</y>
-          <width>141</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>J-Pop</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/J-Pop.png</normaloff>../img/J-Pop.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_16">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>110</y>
-          <width>151</width>
-          <height>24</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgba(24, 24, 24, 0);
-QPushButton:hover#quit_button
-{
-    text-decoration: underline; 
-}</string>
-        </property>
-        <property name="text">
-         <string>Made For You</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>140</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Daily Mix 1</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Daily Mix 1.png</normaloff>../img/Daily Mix 1.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>140</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Daily Mix 2</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Daily Mix 2.png</normaloff>../img/Daily Mix 2.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>140</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Daily mix 3</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Daily Mix 3.png</normaloff>../img/Daily Mix 3.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_17">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>220</y>
-          <width>71</width>
-          <height>24</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgba(24, 24, 24, 0);
-QPushButton:hover#quit_button
-{
-    text-decoration: underline; 
-}</string>
-        </property>
-        <property name="text">
-         <string>Music</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_24">
-        <property name="geometry">
-         <rect>
-          <x>670</x>
-          <y>250</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Sau Đêm Nay</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Sau Đêm Nay.png</normaloff>../img/Sau Đêm Nay.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_22">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>250</y>
-          <width>341</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Tình Đắng Như Ly Cà Phê</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Tình Đắng Như Ly Cà Phê.png</normaloff>../img/Tình Đắng Như Ly Cà Phê.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_25">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>330</y>
-          <width>181</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>id 072019</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/id 072019.png</normaloff>../img/id 072019.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_23">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>250</y>
-          <width>281</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Đường Tôi Chở Em về</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Đường Tôi Chở Em Về.png</normaloff>../img/Đường Tôi Chở Em Về.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_20">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>61</width>
-          <height>24</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgba(24, 24, 24, 0);
-QPushButton:hover#quit_button
-{
-    text-decoration: underline; 
-}</string>
-        </property>
-        <property name="text">
-         <string>List</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="page_10">
-       <widget class="QPushButton" name="pushButton_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>20</y>
-          <width>341</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Tình Đắng Như Ly Cà Phê</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Tình Đắng Như Ly Cà Phê.png</normaloff>../img/Tình Đắng Như Ly Cà Phê.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_9">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>20</y>
-          <width>281</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Đường Tôi Chở Em về</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Đường Tôi Chở Em Về.png</normaloff>../img/Đường Tôi Chở Em Về.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_10">
-        <property name="geometry">
-         <rect>
-          <x>670</x>
-          <y>20</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Sau Đêm Nay</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Sau Đêm Nay.png</normaloff>../img/Sau Đêm Nay.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_11">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>100</y>
-          <width>181</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Roboto Mono Medium&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>id 072019</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/id 072019.png</normaloff>../img/id 072019.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-      </widget>
       <widget class="QWidget" name="page_11">
-       <widget class="QPushButton" name="pushButton_13">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>80</y>
-          <width>401</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 26pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Lofi Thật Lâu Phai</string>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>150</width>
-          <height>150</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="lbl_detail_album">
         <property name="geometry">
          <rect>
           <x>570</x>
           <y>20</y>
-          <width>91</width>
+          <width>211</width>
           <height>16</height>
          </rect>
         </property>
@@ -661,15 +156,15 @@ border-radius: 10;</string>
 background:rgb(29, 29, 29);</string>
         </property>
         <property name="text">
-         <string>Public List</string>
+         <string>Albumn</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="lbl_detail_artist">
         <property name="geometry">
          <rect>
           <x>570</x>
           <y>40</y>
-          <width>131</width>
+          <width>211</width>
           <height>31</height>
          </rect>
         </property>
@@ -678,10 +173,10 @@ background:rgb(29, 29, 29);</string>
 background:rgb(29, 29, 29);</string>
         </property>
         <property name="text">
-         <string>By : Lizz</string>
+         <string>Artist:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="lbl_detail_playcount">
         <property name="geometry">
          <rect>
           <x>570</x>
@@ -695,302 +190,14 @@ background:rgb(29, 29, 29);</string>
 background:rgb(29, 29, 29);</string>
         </property>
         <property name="text">
-         <string>66,234 Saves  75 songs, 4h 50m</string>
+         <string>Played:</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_14">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>170</y>
-          <width>81</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../IMG/PlayIcon.png</normaloff>../IMG/PlayIcon.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>64</width>
-          <height>64</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_15">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>170</y>
-          <width>51</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/ArrowDownIcon.png</normaloff>../img/ArrowDownIcon.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_18">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>170</y>
-          <width>51</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/CheckIcon.png</normaloff>../img/CheckIcon.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_19">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>170</y>
-          <width>51</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/EllipsisIcon.png</normaloff>../img/EllipsisIcon.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_45">
-        <property name="geometry">
-         <rect>
-          <x>370</x>
-          <y>260</y>
-          <width>281</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Đường Tôi Chở Em về</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Đường Tôi Chở Em Về.png</normaloff>../img/Đường Tôi Chở Em Về.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_46">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>260</y>
-          <width>341</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Tình Đắng Như Ly Cà Phê</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Tình Đắng Như Ly Cà Phê.png</normaloff>../img/Tình Đắng Như Ly Cà Phê.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_47">
-        <property name="geometry">
-         <rect>
-          <x>670</x>
-          <y>260</y>
-          <width>201</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Sau Đêm Nay</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Sau Đêm Nay.png</normaloff>../img/Sau Đêm Nay.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_48">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>340</y>
-          <width>181</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>id 072019</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/id 072019.png</normaloff>../img/id 072019.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_49">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>340</y>
-          <width>191</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Cẩm Tú Cầu</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Cẩm Tú Cầu.png</normaloff>../img/Cẩm Tú Cầu.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_50">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>340</y>
-          <width>161</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Em Thích</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Em Thích.png</normaloff>../img/Em Thích.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_51">
-        <property name="geometry">
-         <rect>
-          <x>580</x>
-          <y>340</y>
-          <width>171</width>
-          <height>71</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-        </property>
-        <property name="text">
-         <string>Gió(Lofi)</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../img/Gió(Lofi).png</normaloff>../img/Gió(Lofi).png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>75</width>
-          <height>75</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="lbl_detail_img">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>20</y>
           <width>161</width>
           <height>161</height>
          </rect>
@@ -998,14 +205,47 @@ border-radius: 10;</string>
         <property name="text">
          <string/>
         </property>
-        <property name="pixmap">
-         <pixmap>../img/Lofi Thật lâu phai.png</pixmap>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
         <property name="alignment">
          <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="playlistList">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>179</y>
+          <width>881</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>881</width>
+           <height>261</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="lbl_detail_name">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>621</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
         </property>
        </widget>
       </widget>
@@ -1302,9 +542,9 @@ border-radius:5</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>871</width>
-          <height>441</height>
+          <y>50</y>
+          <width>881</width>
+          <height>391</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -1315,18 +555,41 @@ border-radius:5</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>871</width>
-           <height>441</height>
+           <width>881</width>
+           <height>391</height>
           </rect>
          </property>
         </widget>
+       </widget>
+       <widget class="QLineEdit" name="txt_search">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>0</y>
+          <width>461</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_search">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>0</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
        </widget>
       </widget>
      </widget>
      <widget class="QPushButton" name="btn_info">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>230</x>
         <y>20</y>
         <width>101</width>
         <height>41</height>
@@ -1342,7 +605,7 @@ border-radius:16;
        <string>Info</string>
       </property>
      </widget>
-     <widget class="QSlider" name="horizontalSlider">
+     <widget class="QSlider" name="slider_duration">
       <property name="geometry">
        <rect>
         <x>380</x>
@@ -1359,17 +622,17 @@ border-radius:5;</string>
        <enum>Qt::Orientation::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_21">
+     <widget class="QLabel" name="lbl_time">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>240</x>
         <y>590</y>
-        <width>49</width>
-        <height>16</height>
+        <width>131</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 8pt &quot;Pinky Blues&quot;;</string>
+       <string notr="true">font: 12pt &quot;Pinky Blues&quot;;</string>
       </property>
       <property name="text">
        <string>x:xx</string>
@@ -1378,26 +641,7 @@ border-radius:5;</string>
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_22">
-      <property name="geometry">
-       <rect>
-        <x>1150</x>
-        <y>590</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 8pt &quot;Pinky Blues&quot;;</string>
-      </property>
-      <property name="text">
-       <string>x:xx</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btn_play">
       <property name="geometry">
        <rect>
         <x>760</x>
@@ -1420,7 +664,7 @@ border-radius:5;</string>
        </size>
       </property>
      </widget>
-     <widget class="QSlider" name="horizontalSlider_2">
+     <widget class="QSlider" name="slider_volume">
       <property name="geometry">
        <rect>
         <x>1130</x>
@@ -1437,7 +681,7 @@ border-radius:5;</string>
        <enum>Qt::Orientation::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_52">
+     <widget class="QPushButton" name="btn_volume">
       <property name="geometry">
        <rect>
         <x>1090</x>
@@ -1460,7 +704,7 @@ border-radius:5;</string>
        </size>
       </property>
      </widget>
-     <widget class="QLabel" name="label_8">
+     <widget class="QLabel" name="lbl_curr_name">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1475,54 +719,23 @@ font: 500 14pt &quot;Comfortaa&quot;;
 border-radius: 10;</string>
       </property>
       <property name="text">
-       <string>Now Playing: Đường Tôi Chở Em Về</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_53">
+     <widget class="QLabel" name="lbl_curr_img">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>70</x>
         <y>570</y>
-        <width>281</width>
-        <height>71</height>
+        <width>100</width>
+        <height>100</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:rgb(24, 24, 24);
-font: 500 14pt &quot;Comfortaa&quot;;
-border-radius: 10;</string>
-      </property>
       <property name="text">
-       <string>Đường Tôi Chở Em về</string>
+       <string/>
       </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../img/Đường Tôi Chở Em Về.png</normaloff>../img/Đường Tôi Chở Em Về.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>75</width>
-        <height>75</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_info_2">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>20</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;Pinky Blues&quot;;
-background:rgb(51, 51, 51);
-border-radius:16;
-</string>
-      </property>
-      <property name="text">
-       <string>Liked</string>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -1534,7 +747,7 @@ border-radius:16;
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>24</height>
+     <height>37</height>
     </rect>
    </property>
   </widget>

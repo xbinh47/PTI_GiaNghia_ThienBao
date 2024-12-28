@@ -89,7 +89,7 @@ def get_user_by_id(id):
     return result
 
 def update_user(id, user: User):
-    conn = sqlite3.connect('data/database.db')
+    conn = sqlite3.connect('data/db.db')
     c = conn.cursor()
     query = f"UPDATE user SET name = '{user.name}', email = '{user.email}', fav_music = '{user.fav_music}', gender = '{user.gender}', avatar = '{user.avatar}' WHERE id = '{id}'"
     c.execute(query)
@@ -97,22 +97,68 @@ def update_user(id, user: User):
     conn.close()
     
 def get_songs_by_name(name):
-    conn = sqlite3.connect('data/spotify.db')
+    conn = sqlite3.connect('data/db.db')
     conn.row_factory = dict_factory
     c = conn.cursor()
     alias = build_alias(name)
-    query = f"SELECT id,name,album_name,playcount,artist_names FROM songs WHERE name LIKE '%{name}%' OR alias LIKE '%{alias}%'"
+    query = f"SELECT id,name,album_name,playcount,artist_names,image_path,file_path FROM songs WHERE name LIKE '%{name}%' OR alias LIKE '%{alias}%'"
     c.execute(query)
     result = c.fetchall()
     conn.close()
     return result
 
 def get_first_15_songs_ordered_by_playcount():
-    conn = sqlite3.connect('data/spotify.db')
+    conn = sqlite3.connect('data/db.db')
     conn.row_factory = dict_factory
     c = conn.cursor()
-    query = f"SELECT id,name,album_name,playcount,artist_names FROM songs ORDER BY playcount DESC LIMIT 15"
+    query = f"SELECT id,name,album_name,playcount,artist_names,image_path,file_path FROM songs ORDER BY playcount DESC LIMIT 15"
     c.execute(query)
     result = c.fetchall()
+    conn.close()
+    return result
+
+def get_song_by_id(id):
+    conn = sqlite3.connect('data/db.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    query = f"SELECT id,name,album_name,playcount,artist_names,image_path,file_path FROM songs WHERE id = '{id}'"
+    c.execute(query)
+    result = c.fetchone()
+    conn.close()
+    return result
+
+def add_song_to_playlist(user_id, song_id, song_name, image_path):
+    conn = sqlite3.connect('data/db.db')
+    c = conn.cursor()
+    query = f"INSERT INTO playlist (user_id, song_id, song_name, image_path) VALUES('{user_id}','{song_id}','{song_name}','{image_path}')"
+    c.execute(query)
+    conn.commit()
+    conn.close()
+    
+def delete_song_from_playlist(user_id, song_id):
+    conn = sqlite3.connect('data/db.db')
+    c = conn.cursor()
+    query = f"DELETE FROM playlist WHERE user_id = '{user_id}' AND song_id = '{song_id}'"
+    c.execute(query)
+    conn.commit()
+    conn.close()
+
+def get_playlist_by_user_id(user_id):
+    conn = sqlite3.connect('data/db.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    query = f"SELECT id,user_id,song_id,song_name,image_path FROM playlist WHERE user_id = '{user_id}'"
+    c.execute(query)
+    result = c.fetchall()
+    conn.close()
+    return result
+
+def get_playlist_by_user_id_and_song_id(user_id, song_id):
+    conn = sqlite3.connect('data/db.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    query = f"SELECT id,user_id,song_id,song_name,image_path FROM playlist WHERE user_id = '{user_id}' AND song_id = '{song_id}'"
+    c.execute(query)
+    result = c.fetchone()
     conn.close()
     return result

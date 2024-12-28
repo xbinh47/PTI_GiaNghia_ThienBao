@@ -18,23 +18,17 @@ class Ui_Form(object):
 "    border-radius: 10px;\n"
 "    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */")
         self.lbl_name = QtWidgets.QLabel(parent=Form)
-        self.lbl_name.setGeometry(QtCore.QRect(10, 10, 231, 21))
+        self.lbl_name.setGeometry(QtCore.QRect(10, 10, 231, 31))
         self.lbl_name.setStyleSheet("color: #dddddd;")
         self.lbl_name.setObjectName("lbl_name")
-        self.lbl_artist = QtWidgets.QLabel(parent=Form)
-        self.lbl_artist.setGeometry(QtCore.QRect(10, 40, 231, 21))
-        self.lbl_artist.setStyleSheet("color: #dddddd;")
-        self.lbl_artist.setObjectName("lbl_artist")
-        self.lbl_album = QtWidgets.QLabel(parent=Form)
-        self.lbl_album.setGeometry(QtCore.QRect(10, 70, 231, 21))
-        self.lbl_album.setStyleSheet("color: #dddddd;")
-        self.lbl_album.setObjectName("lbl_album")
-        self.lbl_playcount = QtWidgets.QLabel(parent=Form)
-        self.lbl_playcount.setGeometry(QtCore.QRect(10, 100, 231, 21))
-        self.lbl_playcount.setStyleSheet("color: #dddddd;")
-        self.lbl_playcount.setObjectName("lbl_playcount")
+        self.lbl_image = QtWidgets.QLabel(parent=Form)
+        self.lbl_image.setGeometry(QtCore.QRect(10, 60, 100, 100))
+        self.lbl_image.setStyleSheet("color: #dddddd;")
+        self.lbl_image.setText("")
+        self.lbl_image.setScaledContents(True)
+        self.lbl_image.setObjectName("lbl_image")
         self.btn_play = QtWidgets.QPushButton(parent=Form)
-        self.btn_play.setGeometry(QtCore.QRect(140, 130, 100, 32))
+        self.btn_play.setGeometry(QtCore.QRect(130, 110, 100, 32))
         self.btn_play.setStyleSheet("    background-color: #4caf50; /* Green button for a clean look */\n"
 "    color: white;\n"
 "    border: none;\n"
@@ -43,7 +37,7 @@ class Ui_Form(object):
 "    margin-top: 5px;")
         self.btn_play.setObjectName("btn_play")
         self.btn_add = QtWidgets.QPushButton(parent=Form)
-        self.btn_add.setGeometry(QtCore.QRect(10, 130, 100, 32))
+        self.btn_add.setGeometry(QtCore.QRect(130, 70, 100, 32))
         self.btn_add.setStyleSheet("    background-color: #4caf50; /* Green button for a clean look */\n"
 "    color: white;\n"
 "    border: none;\n"
@@ -59,8 +53,5 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.lbl_name.setText(_translate("Form", "Name:"))
-        self.lbl_artist.setText(_translate("Form", "Artist: "))
-        self.lbl_album.setText(_translate("Form", "Album:"))
-        self.lbl_playcount.setText(_translate("Form", "Played:"))
         self.btn_play.setText(_translate("Form", "Nghe"))
         self.btn_add.setText(_translate("Form", "Thêm"))
