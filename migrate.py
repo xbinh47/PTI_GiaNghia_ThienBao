@@ -15,7 +15,7 @@ def get_all_songs():
     return result
 
 def get_all_artists():
-    conn = sqlite3.connect('data/spotify.db')
+    conn = sqlite3.connect('data/db.db')
     conn.row_factory = row_factory
     c = conn.cursor()
     query = "SELECT * FROM artists"
@@ -24,19 +24,19 @@ def get_all_artists():
     conn.close()
     return result
 songs = get_all_songs()
-missing_image = []
-for song in songs:
-    # check image path exist in songs_images folder
-    if song["image_path"] == "" or song["image_path"] is None:
-        missing_image.append(song["id"])
-    else:
-        # check image path exist in songs_images folder
+# missing_image = []
+# for song in songs:
+#     # check image path exist in songs_images folder
+#     if song["image_path"] == "" or song["image_path"] is None:
+#         missing_image.append(song["id"])
+#     else:
+#         # check image path exist in songs_images folder
         
-        if not os.path.exists(song["image_path"]):
-            missing_image.append(song["id"])
-for song_id in missing_image:
-    with open("data2.txt", "a") as f:
-        f.write(f"{song_id}\n")
+#         if not os.path.exists(song["image_path"]):
+#             missing_image.append(song["id"])
+# for song_id in missing_image:
+#     with open("data2.txt", "a") as f:
+#         f.write(f"{song_id}\n")
 # artists = get_all_artists()
 # artist_map = {artist["id"]: artist["name"] for artist in artists}
 # get all songs and artist id than add artist name to song
@@ -95,20 +95,19 @@ def build_alias(name: str) -> str:
         name = name.replace('--', '-')
     return name
 
-# # Update the database with artist names
-# conn = sqlite3.connect('data/spotify.db')
-# c = conn.cursor()
-# for song in songs:
-#     # Join artist names with comma if multiple artists
-#     artist_names_str = ','.join(song["artist_names"])
-#     c.execute("""
-#         UPDATE songs 
-#         SET artist_names = ?, alias = ? 
-#         WHERE id = ?
-#     """, (artist_names_str, build_alias(song["name"]), song["id"]))
+# Update the database with artist names
+conn = sqlite3.connect('data/db.db')
+c = conn.cursor()
+for song in songs:
+    # Join artist names with comma if multiple artists
+    c.execute("""
+        UPDATE songs 
+        SET  alias = ? 
+        WHERE id = ?
+    """, (build_alias(song["name"]), song["id"]))
 
-# conn.commit()
-# conn.close()
+conn.commit()
+conn.close()
 
 # update song_images
 # with open("data.txt", "r") as f:

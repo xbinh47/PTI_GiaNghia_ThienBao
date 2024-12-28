@@ -207,6 +207,7 @@ class Ui_MainWindow(object):
         self.lbl_time.setObjectName("lbl_time")
         self.btn_play = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
         self.btn_play.setGeometry(QtCore.QRect(760, 620, 41, 31))
+        self.btn_play.setStyleSheet("color: white !important;")
         self.btn_play.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("/Users/pinxun/Documents/MindX/PTI/HTLO-PTI03/PTI_GiaNghia_ThienBao/ui/../IMG/PlayIcon.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -247,7 +248,7 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
