@@ -220,7 +220,7 @@ class PlaylistItemWidget(QWidget):
     def delete(self):
         self.delete_song_from_playlist.emit(self.song_id)  
 class Home(QMainWindow):
-    def __init__(self,user_id):
+    def __init__(self,user_id): 
         super().__init__()
         uic.loadUi("ui/Main.ui", self)
         self.user_id = user_id
@@ -421,14 +421,14 @@ class Home(QMainWindow):
     def play_song(self, song_id):
         self.current_song = song_id
         song = get_song_by_id(song_id)
-        file_path = QUrl.fromLocalFile(song["file_path"].replace("\\", "/"))
+        file_path = QUrl.fromLocalFile(song["file_path"].replace("\\","\\"))
         self.player.setSource(file_path)
         self.player.play()
         self.playBtn.setIcon(self.pauseIcon)
         self.curr_name.setText(f"Now playing: {song['name']}")
-        self.curr_img.setPixmap(QPixmap(song["image_path"]))
-        self.lbl_detail_img.setPixmap(QPixmap(song["image_path"]))
-        self.lbl_detail_name.setText(f"Name: {song['name']}")
+        self.curr_img.setPixmap(QPixmap(song["image_path"].replace("/", "\\")))
+        self.lbl_detail_img.setPixmap(QPixmap(song["image_path"].replace("/", "\\")))
+        self.lbl_detail_name.setText(song['name'])
         self.lbl_detail_artist.setText(f"Artist: {song['artist_names']}")
         self.lbl_detail_album.setText(f"Album: {song['album_name']}")
         self.lbl_detail_playcount.setText(f"Playcount: {song['playcount']}")

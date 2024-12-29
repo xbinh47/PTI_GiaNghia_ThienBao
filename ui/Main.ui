@@ -139,60 +139,9 @@ border-radius:16;
        <string notr="true">background:rgb(29, 29, 29)</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_11">
-       <widget class="QLabel" name="lbl_detail_album">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>20</y>
-          <width>211</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 500 10pt &quot;Roboto Mono Medium&quot;;
-background:rgb(29, 29, 29);</string>
-        </property>
-        <property name="text">
-         <string>Albumn</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lbl_detail_artist">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>40</y>
-          <width>211</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 500 16pt &quot;Roboto Mono Medium&quot;;
-background:rgb(29, 29, 29);</string>
-        </property>
-        <property name="text">
-         <string>Artist:</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lbl_detail_playcount">
-        <property name="geometry">
-         <rect>
-          <x>570</x>
-          <y>80</y>
-          <width>321</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 500 10pt &quot;Roboto Mono Medium&quot;;
-background:rgb(29, 29, 29);</string>
-        </property>
-        <property name="text">
-         <string>Played:</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="lbl_detail_img">
         <property name="geometry">
          <rect>
@@ -216,9 +165,9 @@ background:rgb(29, 29, 29);</string>
         <property name="geometry">
          <rect>
           <x>-1</x>
-          <y>179</y>
+          <y>209</y>
           <width>881</width>
-          <height>261</height>
+          <height>231</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -230,7 +179,7 @@ background:rgb(29, 29, 29);</string>
            <x>0</x>
            <y>0</y>
            <width>881</width>
-           <height>261</height>
+           <height>231</height>
           </rect>
          </property>
         </widget>
@@ -238,14 +187,68 @@ background:rgb(29, 29, 29);</string>
        <widget class="QLabel" name="lbl_detail_name">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>110</y>
+          <x>170</x>
+          <y>0</y>
           <width>621</width>
           <height>61</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">font: 32pt &quot;Comfortaa&quot;;</string>
+        </property>
         <property name="text">
          <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_detail_artist">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>80</y>
+          <width>421</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 500 25pt &quot;Comfortaa&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Artist:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_detail_playcount">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>140</y>
+          <width>421</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 500 16pt &quot;Comfortaa&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Played:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_detail_album">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>180</y>
+          <width>311</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 500 14pt &quot;Comfortaa&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>Album</string>
         </property>
        </widget>
       </widget>
@@ -651,7 +654,7 @@ border-radius:5;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: white !important;</string>
+       <string notr="true">-qt-svg-fill-color: green</string>
       </property>
       <property name="text">
        <string/>
@@ -692,6 +695,9 @@ border-radius:5;</string>
         <width>41</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: green;</string>
       </property>
       <property name="text">
        <string/>
@@ -750,7 +756,7 @@ border-radius: 10;</string>
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>37</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
